@@ -1,6 +1,15 @@
-class Student{
+class school {
+    constructor(schoolname){
+        this.schoolname = schoolname;
+    }
+}
 
-    constructor(){
+
+
+class Student extends School {
+
+    constructor(schoolname){
+        super(schoolname)
         this.name ;
         this.age ;
         this.marks ;
@@ -10,7 +19,7 @@ class Student{
     getName(){
         return this.name;
     }
-    
+
     getAge(){
         return this.age;
     }
@@ -28,15 +37,23 @@ class Student{
     }
 
     setMarks(marks){
-        this.marks = marks;
+        if (mark >= 0 && mark < 101 ){
+            this.mark = mark;
+        }else{
+            return "invalid Mark!"
+        }
+       // this.marks = marks;
     }
 
 }
 
 //"Jane",30,[22,50,60,70]
 
-let student1 = new Student()
+let student1 = new Student('ABC')
 
 student1.setName('jane')
 student1.setAge(30)
 student1.setMarks([22,50,60,70])
+
+
+
