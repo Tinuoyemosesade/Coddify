@@ -56,4 +56,22 @@ student1.setAge(30)
 student1.setMarks([22,50,60,70])
 
 
+function Shape(color){
+    this.color = color;
+}
+
+
+
+function Circle(size){
+this.size = size;
+
+}
+
+let shape1 = new Shape('red');
+Circle.prototype=shape1; 
+
+let circle = new Circle(20); 
+console.log(circle.color);
+
+
 
