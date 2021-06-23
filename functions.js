@@ -10,6 +10,7 @@ class Student{
     getName(){
         return this.name;
     }
+    
     getAge(){
         return this.age;
     }
